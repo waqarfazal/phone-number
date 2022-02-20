@@ -1,7 +1,6 @@
  class PhoneNumber {
   
   String clean(String number){
-    //cleanup test
     String result = number.replaceAll(new RegExp('[^0-9]'), '');
     String exchangeCode = result.length == 11? result.substring(4):result.substring(3);
     String areaCode = result.length == 11 ? result.substring(1, 4): result.substring(0, 3);
